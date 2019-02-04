@@ -1,5 +1,5 @@
 import React from 'react';
-import { commitMutation, graphql } from 'react-relay';
+import { commitMutation, graphql, createRefetchContainer } from 'react-relay';
 import Environment from '../../../relayEnvironment';
 
 const mutation = graphql`
@@ -12,15 +12,9 @@ const mutation = graphql`
   }
 `;
 
-export default class Home extends React.Component {
+class Home extends React.Component {
   state = {
     keyword: '',
-    topic: '',
-  }
-
-  componentWillMount() {
-    const { topic } = this.props.author
-    this.setState({ topic })
   }
 
   changeKeyword() {
@@ -33,7 +27,9 @@ export default class Home extends React.Component {
         onCompleted: (response, errors) => {
           if(response) {
             const { topic } = response.updateTopic
-            this.setState({ topic, keyword: '' });
+            this.props.relay.refetch();
+          } else {
+            console.log("error", errors)
           }
         },
         onError: err => console.error(err),
@@ -42,8 +38,7 @@ export default class Home extends React.Component {
   }
 
   render() {
-    const { name, id } = this.props.author;
-    const { topic } = this.state;
+    const { name, id, topic } = this.props.author;
     return (
       <div>
         <h2>Author</h2>
@@ -62,3 +57,23 @@ export default class Home extends React.Component {
     )
   }
 }
+
+export default createRefetchContainer(
+  Home,
+  {
+    author: graphql`
+      fragment home_author on Author {
+        id
+        name
+        topic
+      }
+    `,
+  },
+  graphql`
+    query homeRefetchQuery {
+      author {
+        ...home_author
+      }
+    }
+  `,
+);

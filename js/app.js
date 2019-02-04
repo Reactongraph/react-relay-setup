@@ -9,9 +9,7 @@ import Home from './components/home';
 const query = graphql`
   query appQuery {
     author {
-      id
-      name
-      topic
+      ...home_author
     }
   }
 `;

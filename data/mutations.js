@@ -28,7 +28,7 @@ import {
 // write down mutation here
 
 const GraphQLUpdateTopicMutation =  new GraphQLObjectType({
-    name: 'updateTopic',
+    name: 'UpdateTopic',
     description: 'update topic',
     fields: { topic: { type: new GraphQLNonNull(GraphQLString) } },
 })

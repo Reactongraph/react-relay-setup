@@ -1,6 +1,6 @@
 /**
  * @flow
- * @relayHash 34ccba89f608596fba9f593a1dd2c912
+ * @relayHash 93a97215755dac520ad9e6e8ed3f0021
  */
 
 /* eslint-disable */
@@ -10,21 +10,21 @@
 /*::
 import type { ConcreteRequest } from 'relay-runtime';
 type home_author$ref = any;
-export type appQueryVariables = {||};
-export type appQueryResponse = {|
+export type homeRefetchQueryVariables = {||};
+export type homeRefetchQueryResponse = {|
   +author: ?{|
     +$fragmentRefs: home_author$ref
   |}
 |};
-export type appQuery = {|
-  variables: appQueryVariables,
-  response: appQueryResponse,
+export type homeRefetchQuery = {|
+  variables: homeRefetchQueryVariables,
+  response: homeRefetchQueryResponse,
 |};
 */
 
 
 /*
-query appQuery {
+query homeRefetchQuery {
   author {
     ...home_author
     id
@@ -41,13 +41,13 @@ fragment home_author on Author {
 const node/*: ConcreteRequest*/ = {
   "kind": "Request",
   "operationKind": "query",
-  "name": "appQuery",
+  "name": "homeRefetchQuery",
   "id": null,
-  "text": "query appQuery {\n  author {\n    ...home_author\n    id\n  }\n}\n\nfragment home_author on Author {\n  id\n  name\n  topic\n}\n",
+  "text": "query homeRefetchQuery {\n  author {\n    ...home_author\n    id\n  }\n}\n\nfragment home_author on Author {\n  id\n  name\n  topic\n}\n",
   "metadata": {},
   "fragment": {
     "kind": "Fragment",
-    "name": "appQuery",
+    "name": "homeRefetchQuery",
     "type": "Query",
     "metadata": null,
     "argumentDefinitions": [],
@@ -72,7 +72,7 @@ const node/*: ConcreteRequest*/ = {
   },
   "operation": {
     "kind": "Operation",
-    "name": "appQuery",
+    "name": "homeRefetchQuery",
     "argumentDefinitions": [],
     "selections": [
       {
@@ -111,5 +111,5 @@ const node/*: ConcreteRequest*/ = {
   }
 };
 // prettier-ignore
-(node/*: any*/).hash = 'b1bc9e8ea05c662801346176b96d3e80';
+(node/*: any*/).hash = 'cc3780482a654f28015463f43cb56a67';
 module.exports = node;

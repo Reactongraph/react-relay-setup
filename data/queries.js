@@ -28,7 +28,7 @@ import {
 // write down Queries here
 
 const AuthorType = new GraphQLObjectType({
-    name: 'author',
+    name: 'Author',
     description: 'author detail',
     fields: {
         id: { type: new GraphQLNonNull(GraphQLID) },
