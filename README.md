@@ -3,10 +3,10 @@ set up sample app for integrating relay with react, fetch and mutate data in tha
 
 ### SET UP
 * Made dir for react project
-mkdir [simple_react_relay]
+mkdir simple_react_relay
 
 * Move inside directory
-cd [simple_react_relay]
+cd simple_react_relay
 
 * To make a packages file
 npm init
@@ -16,25 +16,25 @@ Babel needed for transforming es6  to es5 so for browser compatibility, express 
 
 * Add relay-compiler devDependency
     
-* [app.js] : Created inside js folder to Render code using ReactDOM.render method
+* app.js : Created inside js folder to Render code using ReactDOM.render method
 
-* [webpack.config.js] : state the rules for our babel-loader and give entry point
+* webpack.config.js : state the rules for our babel-loader and give entry point
 
-* [.babelrc] : provide the options for babel-loader
+* .babelrc : provide the options for babel-loader
 
-* Made [data] folder with these files
+* Made data folder with these files
 
-    [database.js] : Contain all methods thats return or update data on action
+    database.js : Contain all methods thats return or update data on action
 
-    [mutation.js] : Contain all graphql-relay mutations
+    mutation.js : Contain all graphql-relay mutations
 
-    [queries.js] : Contain all graphql-relay queries
+    queries.js : Contain all graphql-relay queries
 
-    [schema.graphql]: Contain all mutation and query types
+    schema.graphql: Contain all mutation and query types
 
-    [schema.js] : Export schema by binding all queries provide by [queries.js] file and mutation provided by [mutations.js] file
+    schema.js : Export schema by binding all queries provide by queries.js file and mutation provided by mutations.js file
 
-* Set up express server by building server.js file and defining listening port, provide  GraphQL Schema in it by importing [schema.js] file from data folder
+* Set up express server by building server.js file and defining listening port, provide  GraphQL Schema in it by importing schema.js file from data folder
 
 * Set up relay environment in relayEnvironment.js file
 
@@ -45,8 +45,8 @@ Babel needed for transforming es6  to es5 so for browser compatibility, express 
         "relay": "relay-compiler --src ./js/ --schema ./data/schema.graphql"
     },
 
-* In start script, we add path of server by that, whenever we start our [server.js] going to start.
-* In relay script, we add path of initial folder and [schema.graphql] file path by that all graphql used type will be define at compile time.
+* In start script, we add path of server by that, whenever we start our server.js going to start.
+* In relay script, we add path of initial folder and schema.graphql file path by that all graphql used type will be define at compile time.
 
 Now, we are ready to use relay in our app, whenever we want to use follow bellow things.
 
