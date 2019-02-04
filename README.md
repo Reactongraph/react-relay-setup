@@ -1,7 +1,7 @@
 # react-relay-setup
 set up sample app for integrating relay with react, fetch and mutate data in that app
 
-# <------------------------------------ SET UP ---------------------------------------->
+<------------------------------------ SET UP ---------------------------------------->
 * Made dir for react project
 mkdir simple_react_relay
 
@@ -48,7 +48,7 @@ In start script, we add path of server by that, whenever we start our server goi
 In relay script, we add path of initial folder and schema.graphql file path by that all graphql used type will be define at compile time.
 
 Now, we are ready to use relay in our app, whenever we want to use follow bellow things
-#<-------------------- Use graphql relay in app ---------------------------->
+<-------------------- Use graphql relay in app ---------------------------->
 
 # import { QueryRenderer, graphql, commitMutation } from 'react-relay'
     * QueryRenderer is the root of a Relay tree. It takes a query, fetches the data and calls the render callback with the data.
@@ -57,7 +57,7 @@ Now, we are ready to use relay in our app, whenever we want to use follow bellow
 # Naming Formate: FileName_propName
     mutation and query name should be in this formate
 
-#<-------------------- RUN SET UP OR CLONED APP ----------------------->
+<-------------------- RUN SET UP OR CLONED APP ----------------------->
 
 # Run yarn / npm install
     Install all required node modules mentioned in package.json file
