@@ -1,0 +1,17 @@
+type Query {
+  author: Author
+}
+
+type Author {
+    name: String
+    id: ID
+    topic: String
+}
+
+type Mutation {
+  updateTopic(topic: String!): UpdateTopic
+}
+
+type UpdateTopic {
+  topic: String
+}
