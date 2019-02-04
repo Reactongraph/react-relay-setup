@@ -54,7 +54,7 @@ Now, we are ready to use relay in our app, whenever we want to use follow bellow
     * QueryRenderer is the root of a Relay tree. It takes a query, fetches the data and calls the render callback with the data.
     * commitMutation is used for performing mutation it will take relay environment, mutation query and variables as an input.
 
-# <FileName>_<propName>
+# Naming Formate: FileName_propName
     mutation and query name should be in this formate
 
 ##<-------------------- RUN SET UP OR CLONED APP ----------------------->##
