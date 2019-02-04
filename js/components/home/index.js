@@ -49,8 +49,9 @@ export default class Home extends React.Component {
         <h2>Author</h2>
         <ul>
             <li>Global ID: {id}</li>
-            <li>Name: {name}</li>
+            <li>Email: {name}</li>
             <li>Topic: <b>{topic}</b></li>
+            <br />
             <input
               onChange={(e) => this.setState({keyword: e.target.value})}
               value={this.state.keyword}

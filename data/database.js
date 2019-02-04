@@ -2,7 +2,7 @@ let TOPIC = "React";
 
 export function author() {
     return {
-        name: "dev.reactjs",
+        name: "js.developer@ongraph.com",
         id: 9,
         topic: TOPIC,
     };

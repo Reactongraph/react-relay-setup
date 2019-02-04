@@ -1,5 +1,3 @@
-import 'todomvc-common';
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -8,23 +6,25 @@ import Environment from '../relayEnvironment';
 
 import Home from './components/home';
 
+const query = graphql`
+  query appQuery {
+    author {
+      id
+      name
+      topic
+    }
+  }
+`;
+
 ReactDOM.render(
   <QueryRenderer
     environment={Environment}
-    query={graphql`
-      query appQuery {
-        author {
-          id
-          name
-          topic
-        }
-      }
-    `}
+    query={query}
     variables={{}}
     render={({error, props}) => {
       if (props) {
-        const { author } = props
-        return author ? <Home author={author} /> : <div>no data</div> ;
+        const { author } = props;
+        return author ? <Home author={author} /> : <div>No data</div>;
       } else {
         return <div>Loading</div>;
       }
