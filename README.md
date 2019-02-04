@@ -47,7 +47,8 @@ Babel needed for transforming es6  to es5 so for browser compatibility, express 
 In start script, we add path of server by that, whenever we start our server going to start.
 In relay script, we add path of initial folder and schema.graphql file path by that all graphql used type will be define at compile time.
 
-Now, we are ready to use relay in our app, whenever we want to use follow bellow things
+Now, we are ready to use relay in our app, whenever we want to use follow bellow things.
+
 <-------------------- Use graphql relay in app ---------------------------->
 
 # import { QueryRenderer, graphql, commitMutation } from 'react-relay'
