@@ -26,10 +26,7 @@ class Home extends React.Component {
         variables,
         onCompleted: (response, errors) => {
           if(response) {
-            const { topic } = response.updateTopic
             this.props.relay.refetch();
-          } else {
-            console.log("error", errors)
           }
         },
         onError: err => console.error(err),
