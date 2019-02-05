@@ -44,7 +44,7 @@ Now, we are ready to use relay in our app, whenever we want to use follow bellow
     * createRefetchContainer is used for refetching query on updation of data
 
 #### Naming Formate: FileName_propName
-    mutation and query name should be in this formate
+    Mutation and query name should be in this formate
 
 ### Run on Local Machine
 
@@ -59,4 +59,5 @@ Now, we are ready to use relay in our app, whenever we want to use follow bellow
     Define all specified types for query and mutations and it will create __generated__ folder for each component query and mutation
     
 #### Run yarn start / npm start
-    Start listening the server
+    Start listening the server port 3000
+    Open browser and enter http://localhost:3000/
