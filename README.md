@@ -48,6 +48,12 @@ Now, we are ready to use relay in our app, whenever we want to use follow bellow
 
 ### Run on Local Machine
 
+#### Requirement
+    You should have node and yarn / npm installed in your system, check it by these commands
+        node --version
+        yarn --version / npm --version
+    if not present then install it.
+
 #### Clone or Download
     Either clone using: git clone https://github.com/Reactongraph/react-relay-setup.git
     Or download zip from clicking on download-zip button in green color giving in top right corner
