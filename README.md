@@ -1,26 +1,12 @@
 # React-relay-setup
-set up sample app for integrating relay with react, fetch and mutate data in that app
+Set up sample app for integrating relay with react, fetch and mutate data in that app
 
-### SET UP
-* Made dir for react project
-mkdir simple_react_relay
+### Structure
+* app.js : Render view using ReactDOM.render method
 
-* Move inside directory
-cd simple_react_relay
+* webpack.config.js : State the rules for our babel-loader and give entry point
 
-* To make a packages file
-npm init
-
-* Add all required packages in package.json file like react, react-dom, babel, webpack, express etc.
-Babel needed for transforming es6  to es5 so for browser compatibility, express server needed to load schema.
-
-* Add relay-compiler devDependency
-    
-* app.js : Created inside js folder to Render code using ReactDOM.render method
-
-* webpack.config.js : state the rules for our babel-loader and give entry point
-
-* .babelrc : provide the options for babel-loader
+* .babelrc : Provide the options for babel-loader
 
 * Made data folder with these files
 
@@ -50,7 +36,7 @@ Babel needed for transforming es6  to es5 so for browser compatibility, express 
 
 Now, we are ready to use relay in our app, whenever we want to use follow bellow things.
 
-### Use graphql relay in app
+### Use of graphql relay in app
 
 #### import { QueryRenderer, createRefetchContainer, commitMutation  } from 'react-relay'
     * QueryRenderer is the root of a Relay tree. It takes a query, fetches the data and calls the render callback with the data.
@@ -60,11 +46,17 @@ Now, we are ready to use relay in our app, whenever we want to use follow bellow
 #### Naming Formate: FileName_propName
     mutation and query name should be in this formate
 
-### RUN SET UP OR CLONED APP
+### Run on Local Machine
 
+#### Clone or Download
+    Either clone using: git clone https://github.com/Reactongraph/react-relay-setup.git
+    Or download zip from clicking on download-zip button in green color giving in top right corner
+    
 #### Run yarn / npm install
     Install all required node modules mentioned in package.json file
+    
 #### Run yran relay / npm relay
     Define all specified types for query and mutations and it will create __generated__ folder for each component query and mutation
+    
 #### Run yarn start / npm start
     Start listening the server
