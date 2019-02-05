@@ -52,6 +52,9 @@ Now, we are ready to use relay in our app, whenever we want to use follow bellow
     Either clone using: git clone https://github.com/Reactongraph/react-relay-setup.git
     Or download zip from clicking on download-zip button in green color giving in top right corner
     
+#### Move to Project directory
+    cd react-relay-setup
+    
 #### Run yarn / npm install
     Install all required node modules mentioned in package.json file
     
